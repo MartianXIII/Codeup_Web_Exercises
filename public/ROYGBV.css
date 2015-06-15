@@ -1,0 +1,33 @@
+.R, .O, .Y, .G, .B, .V{ /* Centralize all div class HTML Elements */
+	border: 1px solid black;
+	width: 70px;
+	height: 70px;
+	margin:20px;
+	color: indigo;
+	font-size:90%;
+	font-weight:900;
+	margin-left:25px;
+	position: relative;
+	float:left;}
+
+.R {background-color: red;}
+
+.O {background-color: orange;}
+
+.Y {background-color: yellow;}
+
+.G {background-color: green; clear:left;}
+
+.B {background-color: blue;}
+
+.V {background-color: violet;}
+
+.arrow{
+	position: absolute;
+	bottom: 55px;
+	left: 50px;}
+
+#ribbon{
+	position: absolute;
+	top: 0px;
+	right: 0px;}
