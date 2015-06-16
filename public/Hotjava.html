@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JAVAVAVAVAVAVAAVAVAVAA</title>
+</head>
+<body>
+	<h1> Bob + John * Paul =</h1>
+	<script language="JavaScript" type="text/javascript">
+
+		function getSize(width, height, depth){
+			var area = width * height;
+			var volume = width * height * depth;
+			var sizes = [area, volume]
+			return sizes;
+		}
+
+		var areaOne = getSize(3, 2, 3)
+		var volumeOne = getSize(3, 2, 3)
+
+
+		var myArray = new Array(); 
+			myArray[0] = “Bob”; 
+			myArray[1] = “Pete”; 
+			myArray[2] = “Paul”;
+			document.write(“myArray[0] = “ + myArray[0] + “<BR>”);
+
+			var myArray = new Array(); 
+				myArray[0] = “Paul”; 
+				myArray[1] = 345; 
+				myArray[2] = “John”; 
+				myArray[3] = 112; 
+				myArray[4] = “Bob”; 
+				myArray[5] = 99;
+
+
+			document.write(“myArray[2] = “ + myArray[2] + “<BR>”); 
+			document.write(“myArray[1] = “ + myArray[1] + “<BR>”);
+					myArray[1] = “Mike”;
+			document.write(“myArray[1] changed to “ + myArray[1]);
+
+		var personnel = new Array();
+				personnel[0] = new Array(); 
+				personnel[0][0] = “Name0”; 
+				personnel[0][1] = “Age0”; 
+				personnel[0][2] = “Address0”;
+				personnel[1] = new Array(); 
+				personnel[1][0] = “Name1”;
+				personnel[1][1] = “Age1”; 
+				personnel[1][2] = “Address1”;
+				personnel[2] = new Array(); 
+				personnel[2][0] = “Name2”; 
+				personnel[2][1] = “Age2”; 
+				personnel[2][2] = “Address2”;
+
+				document.write(“Name : “ + personnel[1][0] + “<BR>”); 
+				document.write(“Age : “ + personnel[1][1] + “<BR>”); 
+				document.write(“Address : “ + personnel[1][2]);
+
+				var myArray = new Array(); myArray[0] = new Array(); 
+				myArray[0][0] = new 
+				myArray[0][0][0][0] = new Array();
+				myArray[0][0][0][0][0] = “This is getting out of hand”
+				document.write(myArray[0][0][0][0][0]);
+
+				// the statement below will evaluate to true
+							false && false || true
+
+// due to order of operations, the statement will be evaluated like this:
+							true || ((!true) && true)
+
+// see how the parenthesis make it more clear what order things will be evaluated in?
+// when multiple logical operators are using together, use parenthesis to make things clear.
+
+// looking at a real-world scenario:
+
+							var isLoggedIn = true;
+							var isAdmin = false;
+							var isOwner = true;
+
+// the following statement would be true
+isLoggedIn && isAdmin || isOwner;
+
+// however, it would be evaluated like this:
+(isLoggedIn && isAdmin) || isOwner;
+
+// when what we really want is this:
+isLoggedIn && (isAdmin || isOwner);
+
+	</script>
+
+
+
+
+
+</body>
+</html>
