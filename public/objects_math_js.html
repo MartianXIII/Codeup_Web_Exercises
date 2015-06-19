@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>MathObjects</title>
+</head>
+<body>
+    <script type="text/javascript">
+     "use strict"
+        // create a circle object
+        var circle = {
+            radius: 3,
+            getArea: function () {
+        // todo: finish this method
+        // hint: area = pi * radius^2
+            return Math.PI * Math.pow(this.radius, 2);
+        },
+
+            logInfo: function (round) {
+            var area = this.getArea();
+            if (round == true) {
+            console.log('Area of a circle with radius: ' + this.radius + ', is: ' + Math.round(area));
+            Math.round(area);
+        }   else {
+            console.log ('Area of a circle with radius: ' + this.radius + ', is:' + area);
+        }}};
+
+
+// log info about the circle
+            circle.logInfo(false);
+            circle.logInfo(true);
+
+            circle.radius = 5;
+
+// log info about the circle
+            circle.logInfo(false);
+            circle.logInfo(true);
+    </script>
+
+</body>
+</html>

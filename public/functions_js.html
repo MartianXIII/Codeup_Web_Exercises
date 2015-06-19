@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<title>FunctionS</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	"use strict"
+		(function () {
+			function sayHello(name){
+				return 'Hello, ' + name;
+			}
+
+			function is0dd(number) {
+				var message = (number % 2 !==0) ? number + 'is odd' : number + 'is even';
+				return message;
+			}
+
+			var myNameIs = 'Mars';
+			var random = Math.floor((Math.random()*100)+1);
+			var message = sayHello(myNameIs); 
+
+			console.log(message);   //('Hello from ' + myNameIs);
+
+			var result = is0dd(random);
+			console.log(result);
+
+		}());
+
+
+
+
+
+
+
+
+		//(function () {
+			//var myNameIs = 'Mars';
+		//		console.log('Hello from ' + myNameIs);
+		//}());
+	
+		//(function() {
+			
+			//var odd = random %2 != 0; odd ?
+			//console.log('Number is odd') : console.log('Number is even.');
+			//console.log("Random: " + random);
+		//}());
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch Statement JS</title>
+</head>
+<body>
+	<h1>Mars the Martien</h1>
+	<script src='/js/if_else.js'>
+
+// just know that the var 'color' will end up with a rand value from the colors array
+	var colors = ['R', 'O', 'Y', 'G', 'B', 'I', 'V'];
+	var color = colors[Math.floor(Math.random()*colors.length)];
+
+	var favorite = 'R'; // TODO: change this to your favorite color from the list
+			console.log('Random Color: ' + color);
+
+		switch (color) {
+			case "R" :
+				console.log("Red is like Blood, you must like Game of Thrones");break;
+			 case "O" :
+				console.log ("Orange you glad to see me?"); break;
+			 case "Y" :
+				console.log("Yellow? The Simpsonssss"); break;
+			case "G" :
+				console.log("Money, Monie, Mone"); break;
+			case "B" :
+				console.log("Blue 42, Blue 42, hut,hut,hike"); break;
+			 case "I" :
+				console.log("Indigo....wut"); break;
+			 default:
+				console.log("Violet, you're turning Violet - Violet"); 
+
+
+ 		var message = (color == favorite)\
+  			color + " There will be blood!" : color + " nahhh";
+
+// TODO: Create a block of if/else statements to check for every color except indigo and violet.
+// TODO: When a color is encountered log a message that tells the color, and an object of that color.
+//       Example: Blue is the color of the sky.
+
+// TODO: Have a final else that will catch indigo and violet.
+// TODO: In the else, log: I do not know anything by that color.
+
+// TODO: Using the ternary operator, conditionally log a statement that
+//       says whether the random color matches your favorite color.
+</script>
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<title>ObjectsJson</title>
+</head>
+<body>
+	<script type="text/javascript">
+	"use strict"
+	(function() {
+		var books = [{
+			title: "JavaScript - The Definitive Guide",
+			author: { 
+				first:"Oreilly", 
+				last:"Oreally" ,
+			}
+		},{	title: "",
+			author: {
+				first: "", 
+				last:"" ,
+		}
+
+
+			
+		console.log(books);
+	books.forEach(function (element, index, array) {
+		console.log('Book # ' + (index + 1));
+		console.log('Title: ' + element.title);
+		console.log('Author: ' + element.author.first + ' ' + element.author.last);
+		console.log('---');
+});
+	</script>
+
+</body>
+</html>
