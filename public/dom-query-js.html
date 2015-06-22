@@ -1,0 +1,52 @@
+<html><head>
+    <meta charset="UTF-8">
+    <title>DOM: Query and Modify</title>
+</head>
+<body>
+    <h1 id="mainheader">JavaScript is Cool</h1>
+    <ul>
+        <li data-dbid="1">Item 1</li>
+        <li data-dbid="2">Item 2</li>
+        <li data-dbid="3">Item 3</li>
+        <li data-dbid="4">Item 4</li>
+        <li data-dbid="5">Item 5</li>
+    </ul>
+    <h2 id="subheader">Hello Again.</h2>
+    <p class="subParagraph">
+        Mission SNAFU'D
+    </p>
+
+    <script>
+        "use strict";
+        (function() {
+            var mainHeader = document.getElementById('id');
+                mainheader.innerHTML = 'JavaScript is Cool';
+                console.log();
+
+            var subheader = document.getElementById('subheader');
+                subheader.style.color = '#00f';
+                subheader = 'Hello Again';
+              
+            var listItems = document.getElementsByTagName('li');
+                for (var i = 0; i < listItems.length; i++){
+                    var dbid = listItems[i].getAttribute("data-dbid")
+                    console.log(listItems[0]);
+                    listItems[0].style.color ='#00f';
+                    listItems[1].style.color ='#ccc'
+                    listItems[3].style.color ='#ccc'
+                    
+                }
+
+            // TODO: Set text color on every other list item to grey
+            // TODO: Set text color of li with dbid = 1 to blue
+
+            // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+            var subParagraphs = document.getElementsByTagName('subParagraph');
+                subParagraphs.innerHTML = "Mission Accomplished!";
+
+            // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        })();
+    </script>
+
+
+</body></html>
