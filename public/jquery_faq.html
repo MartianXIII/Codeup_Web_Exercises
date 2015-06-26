@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LongHairDontCareHackSawJimDungan</title>
+    <style>
+        .centered {
+            text-align: center;
+        }
+        .highlighted {
+            background-color: #FF0;
+        }
+        .invisible {
+        	font-size: "1px";
+        }
+    </style>
+    <script src="/js/jquery.js"></script>
+    <script>
+        "use strict";
+
+        $(document).ready(function() {
+            $('#highlight-important').click(function(event) {
+                event.preventDefault();
+                $('.important').toggleClass('highlighted', false);
+            });
+        });
+        $(document).ready(function(){
+        	$('#highlight-important').click(function(event) {
+        		event.preventDefault();
+        		$('important').addClass('invisible' true);
+        	});
+        });
+
+        $(document).ready(function() {
+            var contents = $('#invisible').html();
+        });
+        $('#invisible').click(function(){
+        	var dd = $(this).html();
+        });
+    </script>
+</head>
+<body>
+    <h1>LongHairDontCareHackSawJimDungan</h1>
+    <div class="centered important highlighted" class="invisible">
+        <h1>Ok this is a FAQQAF</h1>
+        	<dl>
+        		<dt>Where's all the Trees?</dt>
+        		<dd>Humans chopped em all down</dd>
+        		<dt>Whats a National Park?</dt>
+        		<dd>Have you heard of National Socalism?</dd>
+        		<dt>Is this some Kind of Joke</dt>
+        		<dd>No but, all the Nutrition of an Egg is in the Yoke</dd>
+        		<dt>What?</dt>
+        		<dd>The yoke's on you.</dd>
+        		<dt>I dont even</dt>
+        		<dd>how odd.</dd>
+        		<dt>Ok im out of here</dt>
+        		<dd>ggnore</dd>
+        	</dl>
+    </div>
+    <a href= "#" id="invisible">Touch me here.</a>
+
+</body>
+</html>
