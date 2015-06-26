@@ -5,18 +5,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<style type="text/css">
-			h2 {
-				text-decoration: line-through;
-				color: green;
-			}
-		</style>
-			<link rel="stylesheet" type="text/css" href="/css-demo.css">
+	<style type="text/css">
+		h2 {
+			text-decoration: line-through;
+			color: green;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="/css-demo.css">
 <title>My First Form</title>
 </head>
 <body>
 	<form method="POST" action="/my_first_form.php">
-    
         <label for="username">Username</label>
         <input id="username" name="username" type="text" placeholder="username" autofocus required>
     
@@ -26,14 +25,11 @@
         <input name="submit" type="Submit"<button type="What is This" /button>
 	</form>
 
-
 	<section class="form">
 		<form method="POST" action="/my_first_form.php">
-			<p>
-				<h2>User Login</h2>
-				<label for="TO">TO</label>
-				<input id="TO" name="To" type="text" placeholder="Who?">
-			</p>
+			<h2>User Login</h2>
+			<label for="TO">TO</label>
+			<input id="TO" name="To" type="text" placeholder="Who?">
 			
 			<p>
 				<label for="subject">Subject</label>
@@ -49,7 +45,6 @@
 			</P>
 
 			<input name="submit" type="submit">
-
 			<input type="checkbox" id="save" name"save" value="yes"</p>
 
 		</form>
@@ -97,11 +92,5 @@
 					<input type="submit" name="submit"
 				</select>
 		</form>
-
-
-
 	</section>
-
-
-	</form>
 </body>
