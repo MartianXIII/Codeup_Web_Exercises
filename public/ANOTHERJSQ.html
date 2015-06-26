@@ -4,12 +4,12 @@
 	<title>This in NEW</title>
 </head>
 <body>
-	<h1>THIS IS JAVASCRIPTTT!</h1>
+	<h1 id="codeup">THIS IS JAVASCRIPTTT!</h1>
 		<p>Whatever, i don't even.</p>
 		<p>Also, am odd.</p>
 		<p>Follow me?</p>
 
-		<h2>Once again, im like whatever</h2>
+		<h2 id ="DOS">Once again, im like whatever</h2>
 			<p>Tag</p>
 			<p>Tag2</p>
 			<p>Taggggggging.</p>
@@ -33,25 +33,48 @@
 			});
 
 			$('h2').dblclick(function(){
+				$('p').css('background-color', 'salmon')
 				console.log('Breeeazy');
+
+
 			});
 
 		$(document).ready(function(){
 			$('p').hover(function(){
-				$('p').css('font-size', '40px')
+				$(this).css('font-size', '40px');
+				(function(){
+					$(this).css('font-size', '20px')
+				})
+
 			})
-		})
+		});
 		$(document).ready(function(){
 			$('p').css('font-size', '20px')
+			
 		})
 			
 
 			$('h1').css('background-color', 'salmon')
 			$()
 		})
-		window.onload = function() {
-    alert( 'The page has finished loading!' );
-}
+		
+		$(document).ready(function() {
+            var contents = $('#codeup').html();
+            alert(contents);
+        });
+		$(document).ready(function(){
+			var contents = $('#DOS').html();
+			$(document).ready(function(){
+			$('p').hover(function(){
+				$(this).css('font-size', '40px');
+				(function(){
+					$(this).css('font-size', '20px')
+				})
+
+			})
+		});
+		});
+
 	</script>
 
 </body>
