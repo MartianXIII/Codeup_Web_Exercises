@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Hammer",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": 20
+    }, {
+        "title": "Drill",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "powered"
+        ],
+        "price": 1000
+    }, {
+        "title": "Mower",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "gas",
+            "outdoor"
+        ],
+        "price": 2000
+    }, {
+        "title": "Screwdrivers",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": 100
+    }, {
+        "title": "ToolDrone",
+        "quantity": 989,
+        "categories": [
+            "tool",
+            "powered"
+        ],
+        "price": 111000
+    }
+]
