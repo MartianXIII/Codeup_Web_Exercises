@@ -3,7 +3,9 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
-    <h1 id="mainheader">JavaScript is Cool</h1>
+    <button id="btn1">Click Bait!</button>
+    <h1 id="mainheader">Hello World</h1>
+    <button id="btn2">CcOoLlOoRrSs</button>
     <ul>
         <li data-dbid="1">Item 1</li>
         <li data-dbid="2">Item 2</li>
@@ -11,7 +13,10 @@
         <li data-dbid="4">Item 4</li>
         <li data-dbid="5">Item 5</li>
     </ul>
+
+    <button id="btn3">Blue Button</button>
     <h2 id="subheader">Hello Again.</h2>
+    <button id="btn4">Do Something Button</button>
     <p class="subParagraph">
         Mission SNAFU'D
     </p>
@@ -19,14 +24,29 @@
     <script>
         "use strict";
         (function() {
+
+            var listener = function (event) {
             var mainHeader = document.getElementById('id');
                 mainheader.innerHTML = 'JavaScript is Cool';
-                console.log();
+                     }
 
+            var btn1 = document.getElementById('btn1');
+                btn1.addEventListener('click', listener, false);
+                
+
+                var remover = function (event) {
+                btn1.removeEventListener('click', listener, false);
+                console.log('Event listener removed.');
+                    }
+            var listener3 = function (event) {
             var subheader = document.getElementById('subheader');
                 subheader.style.color = '#00f';
                 subheader = 'Hello Again';
-              
+                    }
+            var btn3 = document.getElementById('btn3');
+                btn3.addEventListener('click', listener3, false);
+
+            var listener2 = function (event) {
             var listItems = document.getElementsByTagName('li');
                 for (var i = 0; i < listItems.length; i++){
                     var dbid = listItems[i].getAttribute("data-dbid")
@@ -35,16 +55,17 @@
                     listItems[1].style.color ='#ccc'
                     listItems[3].style.color ='#ccc'
                     
-                }
+                    }}
+            var btn2 = document.getElementById('btn2');
+                btn2.addEventListener('click', listener2, false);
 
-            // TODO: Set text color on every other list item to grey
-            // TODO: Set text color of li with dbid = 1 to blue
+            var listener4 = function (event) {
+            var subParagraphs = document.getElementsByClassName('subParagraph');
+                subParagraphs[0].innerHTML = "Mission Accomplished!";
+                    }
 
-            // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-            var subParagraphs = document.getElementsByTagName('subParagraph');
-                subParagraphs.innerHTML = "Mission Accomplished!";
-
-            // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+            var btn4 = document.getElementById('btn4');
+                btn4.addEventListener('click', listener4, false);
         })();
     </script>
 
