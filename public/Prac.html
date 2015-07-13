@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPIWmV7Hr4cSzUt_5xQryNKNfmqFRIGpk">
+	</script>
+	<script src="/js/jquery-1.11.3.js"></script>
+	<script>
+
+	var ajaxRequest = $.get("http://api.openweathermap.org/data/2.5/weather", {
+    	APPID: "8e261a7643e3fefdce93ab5f0f2bea13",
+    	q:     "San Antonio, TX",
+    	units: "imperial"
+		}).done(function(data) {
+    	console.log(data);
+		});
+	</script>
+</head>
+<body>
+	<script>
+	</script>
+</body>
+</html>
