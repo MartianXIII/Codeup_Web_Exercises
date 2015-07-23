@@ -1,52 +1,51 @@
 <?php
-//  var_dump($_GET);
-//Symmetry
-  function pageController() {//ALL processing for this page
-    $data = [];//Initializng empty data array
-    $data['Kounter'] = 0;//Iterate data for HTML view
-//ˈsimətrē
-    if(isset($_GET['upordown'])) {//if( isset($this->data[$p]) ) return $this->data[$p];
-      if($_GET['upordown'] == 'up') {//bool isset ( mixed $var [, mixed $... ] )
-        $_GET['Kount']++;
-        $data['Kounter'] = $_GET['Kount'];
-      } elseif($_GET['upordown'] == 'down') {
-        $_GET['Kount']--;
-        $data['Kounter'] =$_GET['Kount'];
-      }
+
+session_start();//Starting session
+$uName = isset($_POST['username']) && htmlspecialchars(strip_tags($_POST['username'] == 'guest'));
+$pass = isset($_POST['password']) && htmlspecialchars(strip_tags($_POST['password'] == 'qwerty'));
+//$sessionId = session_id();//Grab current session id
+//$session = []; //Initialize empty session array
+$LOGGED_IN_USER = false;
+//var_dump($_POST);
+//$name = isset($_POST['name']) ? $_POST['name'] == 'Mars' : '';
+//$number = isset($_POST['number']) ? $_POST['number'] == '9099000111' : '';
+//phpinfo()
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    if ($uName && $pass) {
+      $_SESSION['LOGGED_IN_USER'] = $_POST['username'];
+        header("Location: authorized.php");
+        exit();
+    } else {
+        echo "FUCKT";
     }
-    return $data;//Returns completed data array
+
+/*function endSession () {
+  $_session = [];
+  if(ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 9001,
+    $params["path"], $params["domain"],
+    $params["secure"], $params["httponly"]
+  );
   }
-  extract(pageController());
-//ˈsimətrē
-  function pongController() {//ALL processing for this page
-    $data = [];//Initializng empty data array
-    $data['Score'] = 0;//Iterate data for HTML view
-//ˈsimətrē
-    if(isset($_GET['Ping'])) {//if( isset($this->data[$p]) ) return $this->data[$p];
-      if($_GET['Ping'] == 'Reflect') {//bool isset ( mixed $var [, mixed $... ] )
-        $_GET['Plusone']++;
-        $data['Score'] = $_GET['Plusone'];
-      } elseif($_GET['Ping'] == 'nah') {
-        //$_GET['Plusone']--;
-        $data['Score'] ="G G BRAH";
-      }
-    }
-    return $data;//Returns completed data array
-  }
-  extract(pongController());
- ?>
- <!DOCTYPE html>
- <html>
-   <head>
-     <meta charset="utf-8">
-     <title>Kount</title>
-   </head>
-   <body>
-     <h3><?= $Kounter ?></h3>
-     <a href="?upordown=up&Kount=<?= $Kounter ?>">up</a>
-     <a href="?upordown=down&Kount=<?= $Kounter ?>">down</a>
-     <h4><?= $Score ?></h4>
-     <a href="pong.php?Score=Reflect&Plusone=<? $Score ?>">Reflect</a>
-     <a href="?Ping=Reflect&nah=<?= $Score ?>">nah</a>
-   </body>
- </html>
+}
+    session_destroy();*/
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POST Example</title>
+</head>
+<body>
+    <h2>YO</h2>
+        <form  method="POST">
+            <label>Username</label>
+            <input type="text" name="username"><br><br>
+            <label>Password</label>
+            <input type="password" name="password"><br><br>
+            <input type="submit">
+            <h6>username is 'guest' && password is 'qwerty'</h6>
+        </form>
+</body>
+</html>
