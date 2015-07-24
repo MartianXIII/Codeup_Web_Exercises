@@ -1,8 +1,10 @@
 <?php
 
 session_start();//Starting session
-$uName = isset($_POST['username']) && htmlspecialchars(strip_tags($_POST['username'] == 'guest'));
-$pass = isset($_POST['password']) && htmlspecialchars(strip_tags($_POST['password'] == 'qwerty'));
+$uName = isset($_POST['username']) &&
+htmlspecialchars(strip_tags($_POST['username'] == 'guest'));
+$pass = isset($_POST['password']) &&
+htmlspecialchars(strip_tags($_POST['password'] == 'qwerty'));
 //$sessionId = session_id();//Grab current session id
 //$session = []; //Initialize empty session array
 $LOGGED_IN_USER = false;
@@ -18,7 +20,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } else {
         echo "FUCKT";
     }
-
 /*function endSession () {
   $_session = [];
   if(ini_get("session.use_cookies")) {
@@ -39,6 +40,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 </head>
 <body>
     <h2>YO</h2>
+    <?php require '../functions.php'; ?>
+    <?php include 'inputHas'; ?>
+
         <form  method="POST">
             <label>Username</label>
             <input type="text" name="username"><br><br>

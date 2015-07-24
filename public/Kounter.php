@@ -23,12 +23,13 @@
     $data['Score'] = 0;//Iterate data for HTML view
 //ˈsimətrē
     if(isset($_GET['Ping'])) {//if( isset($this->data[$p]) ) return $this->data[$p];
-      if($_GET['Ping'] == 'Reflect') {//bool isset ( mixed $var [, mixed $... ] )
+      if($_GET['Ping'] == 'ping') {//bool isset ( mixed $var [, mixed $... ] )
         $_GET['Plusone']++;
         $data['Score'] = $_GET['Plusone'];
       } elseif($_GET['Ping'] == 'nah') {
         //$_GET['Plusone']--;
         $data['Score'] ="G G BRAH";
+        echo "GGSON";
       }
     }
     return $data;//Returns completed data array
@@ -46,7 +47,7 @@
      <a href="?upordown=up&Kount=<?= $Kounter ?>">up</a>
      <a href="?upordown=down&Kount=<?= $Kounter ?>">down</a>
      <h4><?= $Score ?></h4>
-     <a href="pong.php?Score=Reflect&Plusone=<? $Score ?>">Reflect</a>
-     <a href="?Ping=Reflect&nah=<?= $Score ?>">nah</a>
+     <a href="pong.php?Score=ping&Plusone=<? $Score ?>">ping</a>
+     <a href="?Ping=ping&nah=<?= $Score ?>">nah</a>
    </body>
  </html>

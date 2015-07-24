@@ -4,7 +4,7 @@ function pongController() {//ALL processing for this page
   $data['Score'] = 0;//Iterate data for HTML view
 //ˈsimətrē
   if(isset($_GET['Ping'])) {//if( isset($this->data[$p]) ) return $this->data[$p];
-    if($_GET['Ping'] == 'Reflect') {//bool isset ( mixed $var [, mixed $... ] )
+    if($_GET['Ping'] == 'pong') {//bool isset ( mixed $var [, mixed $... ] )
       $_GET['Plusone']++;
       $data['Score'] = $_GET['Plusone'];
     } elseif($_GET['Ping'] == 'nah') {
@@ -24,7 +24,7 @@ extract(pongController());
   </head>
   <body>
     <h4><?= $Score ?></h4>
-    <a href="login.php?Score=Reflect&Plusone=<? $Score ?>">Reflect</a>
-    <a href="?Ping=Reflect&nah=<?= $Score ?>">nah</a>
+    <a href="Kounter.php?Score=pong&Plusone=<? $Score ?>">pong</a>
+    <a href="?Ping=pong&nah=<?= $Score ?>">nah</a>
   </body>
 </html>
