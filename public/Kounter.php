@@ -1,12 +1,15 @@
 <?php
+require_once "../Input.php";
 //  var_dump($_GET);
 //Symmetry
   function pageController() {//ALL processing for this page
     $data = [];//Initializng empty data array
-    $data['Kounter'] = 0;//Iterate data for HTML view
+    $data['Kounter'] = 0;
+    //Iterate data for HTML view
 //ˈsimətrē
-    if(isset($_GET['upordown'])) {//if( isset($this->data[$p]) ) return $this->data[$p];
-      if($_GET['upordown'] == 'up') {//bool isset ( mixed $var [, mixed $... ] )
+    if(Input::has("upordown")) {
+    /*if(isset($_GET['upordown'])) {//if( isset($this->data[$p]) ) return $this->data[$p];*/
+      if(Input::get("upordown") == 'up') {//bool isset ( mixed $var [, mixed $... ] )
         $_GET['Kount']++;
         $data['Kounter'] = $_GET['Kount'];
       } elseif($_GET['upordown'] == 'down') {

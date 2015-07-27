@@ -1,52 +1,42 @@
 <?php
 class Log
 {
-
     public $handle;// add a new property to this class
     public $filename;
     public $date;
 
-    public function __construct()// open file and wait
+    public function __construct($prefix = 'log')// open file and wait
     {
+        $this->filename = "log/{$prefix}-" . date('Y-m-d') . ".log";
+        $this->handle = fopen($this->filename, 'a');
+
       //Take in a parameter call $prefix if nothing is passed default to log
-      $prefix->date = $logDateTime;
+      //$prefix->date = $logDateTime;
     }
+
     public function logMessage($logLevel, $message)// add a constructor to my log class
     {
         $logDayTime = date("Y-m-d h:i:s a e");
-        $handle = fopen($this->filename, 'a');
-        $stringToWrite = "{$logDayTime} [{$logLevel}] {$message}" . PHP_EOL;
-        if (file_exists($this->filename)){
-            file_put_contents($this->filename, $stringToWrite, FILE_APPEND);
-        } else {
-            file_put_contents($this->filename, $stringToWrite);
-        }
-        fclose($handle); // add a destructor to the close $handle
+        $stringToWrite = "{$logDayTime} [{$logLevel}] {$message}";
+        fwrite($this->handle, PHP_EOL .  $stringToWrite);
     }
+
     public function info($message)
     {
         $logLevel = 'INFO';
-        return $this->logMessage('INFO', $message);//Update $logMessage to use Handle no longer open and closes its own
+        return $this->logMessage($logLevel, $message);//Update $logMessage to use Handle no longer open and closes its own
     }
+
     public function error($message)
     {
-        $logLevel = 'ERROR';
+        /*$logLevel = 'ERROR';*/
         return $this->logMessage('ERROR', $message);
     }
 
     public function __destruct()
     {
+      fclose($this->handle);
       //close $handle when class is destroyed
     }
 }
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>LOG LOG Log</title>
-  </head>
-  <body>
-    <h1>LOG</h1>
-  </body>
-</html>
