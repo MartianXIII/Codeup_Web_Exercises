@@ -20,7 +20,7 @@ require_once "functions.php";
 
   if($_POST)
   {
-    if(Auth::attempt(escape(Input::get('username')), escape(Input::get('password')))) 
+    if(Auth::attempt(escape(Input::get('username')), escape(Input::get('password'))))
     {
         header("Location: authorized.php");
         exit();
