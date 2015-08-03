@@ -13,11 +13,11 @@
       <input type="text" name="name">
       <input type="submit" name="submit" value="Search">
     </form>
-    <p><a  href="?by=A">A</a> | <a  href="?by=B">B</a> | <a  href="?by=K">C</a> | <a  href="?by=K">D</a> | <a  href="?by=K">E</a> | <a  href="?by=K">F</a>  </p>
-    <p><a  href="?by=A">G</a> | <a  href="?by=B">H</a> | <a  href="?by=K">I</a> | <a  href="?by=K">J</a> | <a  href="?by=K">K</a> | <a  href="?by=K">L</a>  </p>
-    <p><a  href="?by=A">M</a> | <a  href="?by=B">N</a> | <a  href="?by=K">O</a> | <a  href="?by=K">P</a> | <a  href="?by=K">Q</a> | <a  href="?by=K">R</a>  </p>
-    <p><a  href="?by=A">S</a> | <a  href="?by=B">T</a> | <a  href="?by=K">U</a> | <a  href="?by=K">V</a> | <a  href="?by=K">W</a> | <a  href="?by=K">X</a>  </p>
-    <p><a  href="?by=A">Y</a> | <a  href="?by=B">Z</a> | <a  href="?by=K">1</a> | <a  href="?by=K">2</a> | <a  href="?by=K">3</a> | <a  href="?by=K">4</a>  </p>
+    <p><a  href="?by=A">A</a> | <a  href="?by=B">B</a> | <a  href="?by=K">C</a> | <a  href="?by=D">D</a> | <a  href="?by=K">E</a> | <a  href="?by=F">F</a>  </p>
+    <p><a  href="?by=G">G</a> | <a  href="?by=H">H</a> | <a  href="?by=I">I</a> | <a  href="?by=J">J</a> | <a  href="?by=K">K</a> | <a  href="?by=L">L</a>  </p>
+    <p><a  href="?by=M">M</a> | <a  href="?by=N">N</a> | <a  href="?by=O">O</a> | <a  href="?by=P">P</a> | <a  href="?by=Q">Q</a> | <a  href="?by=R">R</a>  </p>
+    <p><a  href="?by=S">S</a> | <a  href="?by=T">T</a> | <a  href="?by=U">U</a> | <a  href="?by=V">V</a> | <a  href="?by=W">W</a> | <a  href="?by=X">X</a>  </p>
+    <p><a  href="?by=Y">Y</a> | <a  href="?by=Z">Z</a> | <a  href="?by=1">1</a> | <a  href="?by=2">2</a> | <a  href="?by=3">3</a> | <a  href="?by=4">4</a>  </p>
     <?php
     //HACK:
     if(isset($_POST['submit'])){//dis Supper Global Array POST
