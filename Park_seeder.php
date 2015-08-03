@@ -1,15 +1,20 @@
 <?php
-$DB_HOST = 'mysql:host=127.0.0.1';
+/*$DB_HOST = 'mysql:host=127.0.0.1';
 $DB_NAME = 'employees';
 $USER = 'codeup';
-$PASS = 'rocks';
-/*define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'employees');
-define('DB_USER', 'codeup');
-define('DB_PASS', 'rocks');*/
+$PASS = 'rocks';*/
+define('DB_HOST', '127.0.0.1');
+define('DB_NAME', 'parks_db');
+define('DB_USER', 'parks_user');
+define('DB_PASS', '');
+//require_once 'parks_config.php';
 require_once 'db_connect.php';
 $dbc->exec('TRUNCATE national_parks');
-
+/*$users = [
+    ['email' => 'jason@codeup.com',   'name' => 'Jason Straughan'],
+    ['email' => 'chris@codeup.com',   'name' => 'Chris Turner'],
+    ['email' => 'michael@codeup.com', 'name' => 'Michael Girdley']
+];*/
 $PARKS = [
     ['name' => 'Acadia',   'location' => 'Maine', 'date_established' => '1919-02-26', 'area_in_acres' => 47389.67],
     ['name' => 'American Samoa',   'location' => 'American Samoa', 'date_established' => '1988-10-31', 'area_in_acres' => 9000.00],
@@ -22,10 +27,14 @@ $PARKS = [
     ['name' => 'Congaree',   'location' => 'South Carolina', 'date_established' => '2003-11-10', 'area_in_acres' => 26545.86],
     ['name' => 'Denali',   'location' => 'Alaska', 'date_established' => '1917-02-26', 'area_in_acres' => 4740911.72]
 ];
-
+/*foreach ($users as $user) {
+    $query = "INSERT INTO users (email, name) VALUES ('{$user['email']}', '{$user['name']}')";
+    $dbc->exec($query);
+    echo "Inserted ID: " . $dbc->lastInsertId() . PHP_EOL;
+}*/
 foreach ($PARKS as $PARK) {
   $query = "INSERT INTO national_parks (name, location, date_established, area_in_acres)
-      VALUES ('{$park['name']}', '{$park['location']}', '{$park['date_established']}', '{$park['area_in_acres']}')";
+      VALUES ('{$PARK['name']}', '{$PARK['location']}', '{$PARK['date_established']}', '{$PARK['area_in_acres']}')";
       $dbc->exec($query);
         echo "Inserted ID: " . $dbc->lastInsertId() . PHP_EOL;
 }
