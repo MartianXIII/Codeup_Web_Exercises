@@ -13,7 +13,7 @@
       <input type="text" name="name">
       <input type="submit" name="submit" value="Search">
     </form>
-    <p><a  href="?by=A">A</a> | <a  href="?by=B">B</a> | <a  href="?by=K">K</a></p>
+    <p><a  href="?by=A">A</a> | <a  href="?by=B">B</a> | <a  href="?by=K">C</a> | <a  href="?by=K">D</a> | <a  href="?by=K">E</a> | <a  href="?by=K">F</a>  </p>
     <?php
     //HACK:
     if(isset($_POST['submit'])){//dis Supper Global Array POST
