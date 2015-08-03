@@ -6,12 +6,14 @@
     <title>Search Contacts</title>
   </head>
   <body>
+    <h1>
     <h3>Search the Contact Database</h3>
     <p>You may seach by first and or last name</p>
     <form method="post" action="search.php?go" id="searchform">
       <input type="text" name="name">
       <input type="submit" name="submit" value="Search">
     </form>
+    <p><a  href="?by=A">A</a> | <a  href="?by=B">B</a> | <a  href="?by=K">K</a></p>
     <?php
     //HACK:
     if(isset($_POST['submit'])){//dis Supper Global Array POST
@@ -23,14 +25,15 @@
               or die('Sorry, please check error:' . mysql_error());
             $mydb=mysql_select_db("yourdatabase");
     //-Query the database table
-    $sql="SELECT ID, FirstName, LastName FROM Contacts WHERE FirstName LIKE '%" . $name . "%' OR LastName LIKE '%" . $name . "%'";
+    $sql="SELECT ID, FirstName, LastName FROM Contacts
+      WHERE FirstName LIKE '%" . $name . "%' OR LastName LIKE '%" . $name . "%'";
     $result=mysql_query($sql);
     //Create while loop and loop through result settype
     while($row=mysql_fetch_array($result))  {
       $FirstName =$row['FirstName'];
       $LastName =$row['LastName'];
       $ID=$row['ID'];
-      
+
     //Dispay array results
     echo "<ul>/n";
     echo "<li>" . "<a href=\"search.php?id=$ID\">" . $FirstName . " " . $LastName . "</a></li>\n";
