@@ -2,6 +2,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+    body {
+      text-align:center;
+      margin-top: 150px;
+    }
+    </style>
     <meta charset="utf-8">
     <title>Search Contacts</title>
   </head>
@@ -40,7 +46,7 @@
 
     //Dispay array results
     echo "<ul>/n";
-    echo "<li>" . "<a href=\"search.php?id=$ID\">" . $FirstName . " " . $LastName . "</a></li>\n";
+    echo "<li>" . "<a href=\"Search.php?id=$ID\">" . $FirstName . " " . $LastName . "</a></li>\n";
     echo "</ul>";
     }
     }
