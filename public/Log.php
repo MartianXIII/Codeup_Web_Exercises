@@ -1,8 +1,8 @@
 <?php
 class Log
 {
-    public $handle;// add a new property to this class
-    public $filename;
+    protected $handle;// add a new property to this class
+    protected $filename;
     public $date;
 
     public function __construct($prefix = 'log')// open file and wait
