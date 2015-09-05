@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Calculadora</title>
+<script language="javascript">
+  "use strict";
+
+    var appendDigits = false
+    var start = 0
+    var Opperator = "="
+    function clearDisplay() {
+      document.calculator.display.value = 0
+      start = 0
+      appendDigits = false
+      Opperator = "="
+    } 
+    function MathMe(newOpperator) {
+    var newArg = eval(document.calculator.display.value)
+ 
+  if (Opperator == "+") {
+    start = start + newArg
+  }
+  else if (Opperator == "-") {
+    start = start - newArg
+  } 
+  else if (Opperator == "/") {
+    start = start / newArg
+  }
+  else if (Opperator == "*") {
+    start = start * newArg
+  }
+  else if (Opperator == "=") {
+    start = newArg
+  }
+  else { 
+    start = newArg
+  }
+  document.calculator.display.value = start
+  appendDigits = false
+  Opperator = newOpperator
+} 
+function digit(dig)
+{
+  if (appendDigits) {
+    document.calculator.display.value += dig
+  }
+  else {
+    document.calculator.display.value = dig
+    appendDigits = true
+  }
+}
+</script>
+</head>
+<body>
+<form name="calculator">
+<input type="text" name="display" value="rekt">
+<br>
+<button id="digit(7)" name="7" value="7"  ></button>
+<button id="digit(8)" name="8" value="8" ></button>
+<button id="digit" name="9" value="9" "digit(9)"></button>
+<br>
+<button id="digit" name="4" value="4" "digit(4)"></button>
+<button id="digit" name="5" value="5" "digit(5)"></button>
+<button id="digit" name="6" value="6" "digit(6)"></button>
+<br>
+<button id="button" name="1" value="1" "digit(1)"></button>
+<button id="button" name="2" value="2" "digit(2)"></button>
+<button id="button" name="3" value="3" "digit(3)"></button>
+<br>
+<button id="button" name="0" value="0" "digit(0)"></button>
+<button id="button" name="C" value="C" "clearDisplay()"></button>
+<button id="button" name="=" value="=" "MathMe('=')"></button>
+<br>
+<button id="button" name="+" value="+" "MathMe('+')"></button>
+<button id="button" name="-" value="-" "MathMe('-')"></button>
+<button id="button" name="*" value="*" "MathMe('*')"></button>
+<button id="button" name="/" value="/" "MathMe('/')"></button>
+</form>
+</body>
+</html>
