@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+</head>
+<body>
+    <div>
+      <button value="C">C</button>
+      <button value="0">0</button>
+      <button value="=">=</button>
+      <button value="/">/</button>
+    </div>
+    <div>
+      <button value="9">9</button>
+      <button value="8">8</button>
+      <button value="7">7</button>
+      <button value="*">*</button>
+    </div>
+    <div>
+      <button value="6">6</button>
+      <button value="5">5</button>
+      <button value="4">4</button>
+      <button value="-">-</button>
+    </div>
+    <div>
+      <button value="3">3</button>
+      <button value="2">2</button>
+      <button value="1">1</button>
+      <button value="+">+</button>
+    </div>
+		<input readonly type="field" id="NumUno">
+		<input readonly type="field" id="Mathing">
+		<input readonly type="field" id="NumDos">
+<script>
+		(function() {
+          	var NumUno = document.getElementById('NumUno');
+          	var Mathing = document.getElementById('Mathing');
+          	var NumDos = document.getElementById('NumDos');
+          	var clicker = document.getElementsByTagName('button')
+          	
+          	var action = function(Mathing){
+          		if(Mathing == '+'){
+          		   result =  parseInt(NumUno.value) + parseInt(NumDos.value);
+          		}else if(Mathing == '-'){
+          		   result =  parseInt(NumUno.value) - parseInt(NumDos.value);
+          		}else if(Mathing == '*'){
+          		   result =  parseInt(NumUno.value) * parseInt(NumDos.value);
+          		}else if(Mathing == '/'){
+          		   result =  parseInt(NumUno.value) / parseInt(NumDos.value);
+          		}
+          	NumUno.value = result;
+          	NumDos.value = '';	
+          	}
+          	
+          	var beforeMathing = true;
+          	var result;
+          	var addStringValue = function(){
+                if(this.value == 'C'){
+                	NumUno.value = '';
+                	Mathing.value = '';
+                	NumDos.value = '';
+                	beforeMathing = true;
+                }		
+          		if(beforeMathing){
+          			if(this.value % 1 == 0){
+                		NumUno.value += this.value;
+                	}else{
+                		if(this.value == '+' || this.value == '-' || this.value == '*' || this.value == '/'){
+                			Mathing.value += this.value;
+	                		beforeMathing = false;
+                		}
+                	}
+                }else{
+                	if(this.value % 1 == 0){
+                		NumDos.value += this.value;
+	                }else if(this.value == '='){
+	                	action(Mathing.value);
+	                	Mathing.value ='';
+	                	beforeMathing = true;
+                	}
+	            }
+            }
+          	for (var i = 0; i < clicker.length; i++) {
+          		clicker[i].addEventListener('click', addStringValue, false);
+	      	}
+        })();
+</script>	
+</body>
+</html>
