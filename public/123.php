@@ -9,79 +9,21 @@
    <head>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!---Stylize--->
      <link href="css/bootstrap.min.css" rel="stylesheet">
      <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="/css/123.css">
+
+     <!---Scriptkiddies--->
+     <script src="/js/123.js"></script>
  		 <script src="/js/modernizr.custom.js"></script>
    </head>
    <body id="page-top" class="index" data-spy="scroll" data-target=".navbar-fixed-top">
-     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-           <div class="container">
-               <div class="navbar-header">
-                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                       <i class="fa fa-bars"></i>
-                   </button>
-                   <a class="navbar-brand page-scroll" href="#page-top">
-                       <i class="fa fa-play-circle"></i>  <span class="light">Holy Batschelet!</span>
-                   </a>
-               </div>
+     <?php include '../public/views/Navvvy.php';?>
+     <?php include '../public/views/Signal.php';?>
 
-               <!-- Collect the nav links, forms, and other content for toggling -->
-               <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                   <ul class="nav navbar-nav">
-                       <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                       <li class="hidden">
-                           <a href="#page-top"></a>
-                       </li>
-                       <li>
-                           <a class="page-scroll" href="#browse">Browse</a>
-                       </li>
-                       <li>
-                           <a class="page-scroll" href="#login">Log In</a>
-                       </li>
-                       <li>
-                           <a class="page-scroll" href="#search">Search</a>
-                       </li>
-                       <li>
-                           <a class="page-scroll" href="/users.create.php">Sign Up</a>
-                       </li>
-                       <li>
-                           <a class="page-scroll" href="#contact">List your Bat Ad</a>
-                       </li>
-                   </ul>
-               </div>
-               <!-- /.navbar-collapse -->
-           </div>
-           <!-- /.container -->
-       </nav>
      <nav class="navbar navbar-a navbar-b">
-
-       <div class="header-section">
-     <div id="bg_container" align="center" class="embed-responsive embed-responsive-16by9">
-       <video autoplay loop class="embed-responsive-item" src="/img/S1.mp4" type=video/mp4></video>
-
- <div id="content">
-  <h1>Geting Started</h1>
-  <h2>HolyBatschelet</h2>
-     </div>
-     <header class="intro">
-         <div class="intro-body">
-             <div class="container">
-                 <div class="row">
-                     <div class="col-md-8 col-md-offset-2">
- 												<h1 class="brand-heading">Batlister</h1>
-                         <p class="intro-text">HolyBatschelet</p>
-                         <a href="#about" class="btn btn-circle page-scroll">
-                             <i class="fa fa-angle-double-down animated"></i>
-                         </a>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </header>
-</div>
-   </div>
-    </div>
 
     <div class="main">
       <ul id="og-grid" class="og-grid">
@@ -309,3 +251,5 @@
     <script src="js/bootstrap.min.js"></script>
    </body>
  </html>
+
+ 
