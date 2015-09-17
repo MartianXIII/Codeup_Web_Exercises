@@ -240,7 +240,6 @@
 <h2></h2>
 <a href="#" style="float: left" onclick="galleryspin('-')">◀</a>
 <a href="#" style="float: right" onclick="galleryspin('')">▶</a>
-
   </div>
 </div>
 
@@ -249,4 +248,3 @@
     <script src="js/bootstrap.min.js"></script>
    </body>
  </html>
- 
