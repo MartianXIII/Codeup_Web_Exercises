@@ -21,7 +21,6 @@
      <?php include '../public/views/Signal.php';?>
 
      <nav class="navbar navbar-a navbar-b">
-
     <div class="main">
       <ul id="og-grid" class="og-grid">
         <li>
@@ -249,5 +248,5 @@
 
 
 
-   
+
  </html>
