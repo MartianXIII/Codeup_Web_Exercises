@@ -2,7 +2,7 @@
 //$dbc = new PDO('mysql:host=127.0.0.1;dbname=database_name', 'USERNAME', 'PASSWORD');
  ?>
 
- 
+
  <!DOCTYPE html>
  <html>
    <head>
@@ -13,9 +13,6 @@
      <link href="css/bootstrap.min.css" rel="stylesheet">
      <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="/css/123.css">
-
-
-
 
      <!---Scriptkiddies--->
      <script src="/js/123.js"></script>
