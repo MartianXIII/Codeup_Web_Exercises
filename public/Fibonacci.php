@@ -6,6 +6,9 @@
   </head>
   <body>
     <script>
+    //ACME5 loop starting index at 2
+    //every loop iteration sums up the previous values then pushes them
+    function fibonacci() {
       var looping = function(n) {
         var a = 0, b = 1, f = 1;
         for(var j = 2; j <= n; j++) {
@@ -15,10 +18,19 @@
         }
         return f;
       };
+
+      var recursive = function(m) {
+        if(m <= 2) {
+          return 1;
+        } else {
+          return this.recursive(m - 1) + this.recursive(m - 2);
+        }
+      };
+    };
     </script>
 
     <script>
-        //ACME6(2015)
+        //ACME6(2015) Symbol: a data type whois instances are unique and immutable
         //Iterator objexts enable custom iteration
         let fibonacci = {
           [Symbol.iterator] () {
