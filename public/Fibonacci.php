@@ -5,6 +5,9 @@
     <title>Fibonacci Script</title>
   </head>
   <body>
+    <main>
+      <h1>Fibo is so Nacci</h1>
+    </main>
     <script>
     //ACME5 loop starting index at 2
     //every loop iteration sums up the previous values then pushes them
@@ -45,7 +48,7 @@
         }
 
         for (var n of fibonacci) {
-          //truncate the sequence at 1000
+          //truncate the sequence at 1000 every 1000
           if (n > 1000)
             break;
           console.log(n);
