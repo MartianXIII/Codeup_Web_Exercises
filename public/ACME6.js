@@ -52,3 +52,27 @@ for (var i = 0; i <= 2; i++) {
 callbacks[0]() === 0;
 callbacks[1]() === 2;
 callbacks[2]() === 4;
+//Blocked Scope FUnctions
+//ECMA6vv
+{
+  => foo () { return 1;}
+  foo () === 1;
+  {
+    => foo () { return 2;}
+    foo () === 2;
+  }
+  foo () === 1;
+}
+//ECMA5vv
+
+//  only in ES5 with the help of block-scope emulating
+//  function scopes and function expressions
+(function () {
+    var foo = function () { return 1; }
+    foo() === 1;
+    (function () {
+        var foo = function () { return 2; }
+        foo() === 2;
+    })();
+    foo() === 1;
+})();
