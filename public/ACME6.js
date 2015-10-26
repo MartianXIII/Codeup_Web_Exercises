@@ -76,3 +76,12 @@ callbacks[2]() === 4;
     })();
     foo() === 1;
 })();
+//ARROW FUNCTIONSSSS!!!11ONE!
+//ECMA6vv
+odds  = evens.map(v => v + 1);
+pairs = evens.map(v => ({ even: v, odd: v + 1 }));
+nums  = evens.map((v, i) => v + i);
+//ECMA5vv
+odds  = evens.map(function (v) { return v + 1; });
+pairs = evens.map(function (v) { return { even: v, odd: v + 1 }; });
+nums  = evens.map(function (v, i) { return v + i; });
