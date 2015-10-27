@@ -85,3 +85,15 @@ nums  = evens.map((v, i) => v + i);
 odds  = evens.map(function (v) { return v + 1; });
 pairs = evens.map(function (v) { return { even: v, odd: v + 1 }; });
 nums  = evens.map(function (v, i) { return v + i; });
+
+//Statement Bodies - expressive closure syntax
+//ECMA6vv
+nums.forEach(v => {
+  if (v % 5 === 0)
+    fives.push(v);
+})
+//ECMA5vv
+nums.forEach(function (v) {
+   if (v % 5 === 0)
+       fives.push(v);
+});
