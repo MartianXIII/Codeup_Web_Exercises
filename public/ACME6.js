@@ -12,10 +12,10 @@ Object.defineProperty(typeof global === "object" ? global : window, "PI", {
 })
 PI > 3.0;
 
-
-//Scoping
-//Blocked scoped variables without hoisting
-//ECMA6vv
+// 
+// Scoping
+// Blocked scoped variables without hoisting
+// ECMA6vv
 for (let i = 0; i < a.length; i++) {
     let x = a[i];
     …
