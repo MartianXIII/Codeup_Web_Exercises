@@ -96,3 +96,13 @@ nums.forEach(function (v) {
    if (v % 5 === 0)
        fives.push(v);
 });
+
+//LEXICAL THiisssss
+//ACME6
+this.nums.forEach((v) => {
+  if (v % 5 === 0)
+  this.fives.push(v);
+});
+
+//ACME 5
+//VARIANT
