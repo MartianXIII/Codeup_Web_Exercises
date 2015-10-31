@@ -105,4 +105,16 @@ this.nums.forEach((v) => {
 });
 
 //ACME 5
-//VARIANT
+//VARIANT 1
+var self = this;
+this.nums.forEach(function (v) {
+  if (v % 5 === 0)
+    self.fives.push(v);
+});
+
+//Variant 2
+//ACME 5.1
+this.nums.forEach(function (v) {
+  if (v % 5 === 0)
+    this.fives.push(v);
+}.bind(this));
