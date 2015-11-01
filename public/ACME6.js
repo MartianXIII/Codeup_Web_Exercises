@@ -118,3 +118,10 @@ this.nums.forEach(function (v) {
   if (v % 5 === 0)
     this.fives.push(v);
 }.bind(this));
+
+//Extended Parameter Handling - Defualt Parameter Values
+//ACME6
+=> f (x, y = 7, z = 42) {
+    return x + y + z;
+}
+f(1) === 50;
