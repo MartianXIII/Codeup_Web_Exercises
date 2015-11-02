@@ -125,3 +125,13 @@ this.nums.forEach(function (v) {
     return x + y + z;
 }
 f(1) === 50;
+
+//ACME5
+function f (x, v, z) {
+  if (v === undefined)
+    v = 7;
+  if (z === undefined)
+    z = 42;
+  return x + y + z;
+};
+f(1) === 50;
