@@ -135,3 +135,12 @@ function f (x, v, z) {
   return x + y + z;
 };
 f(1) === 50;
+
+//REST PARAMETER Values Aggregation of remaining arguments into single parameter of variadic functions.
+//ACME 6
+=> f (x, y, ...a) {
+  return (x + y) * a.length;
+}
+f(1, 2, "hello", true, 7) === 9;
+
+//ACME5
