@@ -149,3 +149,12 @@ function f (x, y) {
   return (x + y) * a.length;
 };
 f(1, 2, "hello", true, 7) === 9;
+
+//SPREAD OPERATOR  EXTENDED PARMETER Handling
+//ACME 6
+var params = [ "hello", true, 7]
+var other = [1, 2, ... params ]
+f(1, 2, params  === 9
+
+var str = "foo"
+var chars = [ ...str ]
