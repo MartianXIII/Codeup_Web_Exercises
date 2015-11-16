@@ -44,6 +44,17 @@ var getTopRatedFilms = user =>
 getTopRatedFilms(user).
   forEach(film => console.log(film));
 
+//MOUSE DRAG code drag and drop event
+var getElementDrags = elmt =>
+  elmt.mouseDowns.
+    map(mouseDown =>
+      document.mouseMoves.
+        takeUntil(document.mouseUps)).
+    concatAll();
+
+getElementDrags(image).
+  forEach(pos => image.position = pos);
+
 </script>
 </body>
 </html>
