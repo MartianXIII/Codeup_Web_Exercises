@@ -61,6 +61,13 @@ getElementDrags(image).
 
   //Events and Arrays are both collections
 
+  //Iterators and Observers
+
+//For Of Loop Ecma6 => incoming
+//Iterator object PULL all elements sequentially One by One
+var iterator = [1, 2, 3].iterator();
+console.log(iterator.next());
+
 
 
 </script>
