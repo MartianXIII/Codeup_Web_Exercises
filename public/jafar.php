@@ -68,6 +68,14 @@ getElementDrags(image).
 var iterator = [1, 2, 3].iterator();
 console.log(iterator.next());
 
+//Observer Pattern  adding a function to a data producer
+//
+document.addEventListener(
+  "mousemove",
+  function next(e) {
+    console.log(e);
+  });
+
 
 
 </script>
