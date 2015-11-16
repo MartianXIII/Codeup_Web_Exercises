@@ -7,7 +7,7 @@
   <body>
 
 <script>
-  
+
 // ECMA 5
 function (x) {
   return x + 1;
@@ -21,6 +21,7 @@ x => x + 1
 (x, y) => x + y
 
 //Lots and Lots of functions today
+[1, 2, 3].forEach(x => console.log(x))
 
 
 </script>
