@@ -45,6 +45,7 @@ getTopRatedFilms(user).
   forEach(film => console.log(film));
 
 //MOUSE DRAG code drag and drop event
+//all mouse moves between mouse down until mouse up
 var getElementDrags = elmt =>
   elmt.mouseDowns.
     map(mouseDown =>
@@ -54,6 +55,8 @@ var getElementDrags = elmt =>
 
 getElementDrags(image).
   forEach(pos => image.position = pos);
+
+  
 
 </script>
 </body>
