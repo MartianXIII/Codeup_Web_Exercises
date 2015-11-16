@@ -22,6 +22,16 @@ x => x + 1
 
 //Lots and Lots of functions today
 [1, 2, 3].forEach(x => console.log(x))
+//Can't repeat an async function with a loop dun dun dun
+//Programming without loops
+[1, 2, 3].map(x => x + 1)
+//Takes function and applies to every item in function - each value in the array - Creates new array[Collection]
+[1, 2, 3].filter(x => x > 1)
+//Test function, apply test to every value
+//if it passes test will it go to new Collection[New array]
+[ [1], [2, 3], [], [4] ].concatAll()
+//Takes Multi Demential array and flattens into 2D
+//Empty array falls off, will not recursively flatten
 
 
 </script>
