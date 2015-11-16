@@ -59,6 +59,8 @@ getElementDrags(image).
   forEach(pos => image.position = pos);
   //forEach to Consume and Do something with the Data
 
+  //Events and Arrays are both collections
+
 
 
 </script>
