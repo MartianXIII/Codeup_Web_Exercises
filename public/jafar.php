@@ -46,6 +46,8 @@ getTopRatedFilms(user).
 
 //MOUSE DRAG code drag and drop event
 //all mouse moves between mouse down until mouse up
+
+//Creating a function to acrue Data
 var getElementDrags = elmt =>
   elmt.mouseDowns.
     map(mouseDown =>
@@ -55,8 +57,9 @@ var getElementDrags = elmt =>
 
 getElementDrags(image).
   forEach(pos => image.position = pos);
+  //forEach to Consume and Do something with the Data
 
-  
+
 
 </script>
 </body>
