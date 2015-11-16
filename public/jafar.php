@@ -33,6 +33,16 @@ x => x + 1
 //Takes Multi Demential array and flattens into 2D
 //Empty array falls off, will not recursively flatten
 
+//TOP-RATED Movies Collection
+var getTopRatedFilms = user =>
+  user.videoLists.
+    map(videoList =>
+      videoList.videos.
+        filter(video => video.rating === 5.0)).
+    concatAll();
+
+getTopRatedFilms(user).
+  forEach(film => console.log(film));
 
 </script>
 </body>
