@@ -35,11 +35,11 @@ x => x + 1
 
 //TOP-RATED Movies Collection
 var getTopRatedFilms = user =>
-  user.videoLists.
-    map(videoList =>
-      videoList.videos.
+  user.videoLists.//array
+    map(videoList =>//Map over all list Genre List
+      videoList.videos.//Object with an Array within
         filter(video => video.rating === 5.0)).
-    concatAll();
+    concatAll();//Concastration
 
 getTopRatedFilms(user).
   forEach(film => console.log(film));
@@ -47,7 +47,7 @@ getTopRatedFilms(user).
 //MOUSE DRAG code drag and drop event
 //all mouse moves between mouse down until mouse up
 
-//Creating a function to acrue Data
+//Creating a function to acrue Mouse down data
 var getElementDrags = elmt =>
   elmt.mouseDowns.
     map(mouseDown =>
@@ -75,9 +75,9 @@ document.addEventListener(
   function next(e) {
     console.log(e);
   });
-
-
-
+//Introducin the Observable
+//Observable === Collection +ArrivesOver Time
+//Iterators[Pull] vs Generators ?? || Autism Generator[Push, Pull]
 </script>
 </body>
 </html>
