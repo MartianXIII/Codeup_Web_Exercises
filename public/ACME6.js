@@ -154,10 +154,12 @@ f(1, 2, "hello", true, 7) === 9;
 //ACME 6
 var params = [ "hello", true, 7]
 var other = [1, 2, ... params ]
-f(1, 2, params  === 9
+f(1, 2, ...params  === 9
 
 var str = "foo"
-var chars = [ ...str ]
+var chars = [ ...str ] // ["f", "o", "o"]
 
+//ACME 5
+var params = ["hello", true, 7];
 
-//acme 5   
+//ACME 6
