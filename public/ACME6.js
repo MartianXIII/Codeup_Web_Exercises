@@ -169,4 +169,6 @@ var chars = str.split(""); // ["f", "o", "o"]
 //ACME 6
 
 //TEMPLATE LITERALS --- STRING INTERPOLATION
-//ACME6
+//ACME6 originally known as Template Strings
+var customer = { name: "Foo"}
+var card = { amount:7, product: "Bar", unitprice: 42}
