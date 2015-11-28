@@ -3,3 +3,13 @@
   width: 80%;
   max-width: 1200px;
 }
+
+.row {
+  width:100%;
+}
+
+.row:after {
+  content:"";
+  display: table;
+  clear: both;
+}
