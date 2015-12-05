@@ -189,3 +189,5 @@ get`http://example.com/foo?bar=${bar + baz}&quux=${quux}`
 
 
 //acme5 -->
+
+const numbers = [1, 2, 3, 4];
