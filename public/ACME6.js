@@ -186,6 +186,16 @@ message = "Hello" + customer.name + ",\n" +
 //Custom Interpolation ACME6
 get`http://example.com/foo?bar=${bar + baz}&quux=${quux}`
 
+//ACME5
+get([ "http://example.com/foo?bar=", "&quux=", "" ],bar + baz, quux);
+
+function quux (strings, ..value) {
+  strings[0] === "foo\n"
+  strings[1] === "bar"
+  strings.raw[0] === "foo\\n"
+  strings.raw[1] === "bar"
+}
+
 
 
 //acme5 -->
