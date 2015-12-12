@@ -196,8 +196,6 @@ function quux (strings, ..value) {
   strings.raw[1] === "bar"
 }
 
-
-
 //acme5 -->
 
 const numbers = [1, 2, 3, 4];
