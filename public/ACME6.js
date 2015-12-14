@@ -208,7 +208,15 @@ quux `foo\n${ 42 }bar`
 
 String.raw `foo\n${ 42 }bar` === "foo\\n42bar"
 
+//Extended Literals
+//Acme 6
+//Binary && Octal Literals
+0b111110111 === 503
+0o767 === 503
 //acme5 -->
+parseInt("111110111", 2) === 503;
+parseInt("767", 8) === 503;
+0767 === 503; //Non strict backwards compatible mode
 
 const numbers = [1, 2, 3, 4];
 const moreNumbers = [...numbers, 5, 6];
