@@ -223,7 +223,7 @@ parseInt("767", 8) === 503;
 const numbers = [1, 2, 3, 4];
 const moreNumbers = [...numbers, 5, 6];
 console.log(moreNumbers);
-//this thoe
+//this
 
 //Hello
 
