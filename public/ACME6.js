@@ -224,8 +224,13 @@ const numbers = [1, 2, 3, 4];
 const moreNumbers = [...numbers, 5, 6];
 console.log(moreNumbers);
 
+//Unicode String &Reg Exp Literals ACME 6
+"𠮷".length === 2
+"𠮷".match(/./u)[0].length === 2
+"\u{20BB7}" === "𠮷" === "\uD842\uDFB7"
+"𠮷".codePointAt(0) == 0x20BB7
+for (let codepoint of "𠮷") console.log(codepoint)
 
-//Its my Birthdayyyyy 46 years until halleys returns!!!
 
 
 
