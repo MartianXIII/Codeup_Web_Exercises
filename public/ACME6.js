@@ -238,6 +238,9 @@ for (let codepoint of "𠮷") console.log(codepoint)
 //  no equivalent in ES5
 //  no equivalent in ES5
 
+//Enhanced Regular Expression
+//Regular exp sticky matching
+
 
 
 //acme 5
