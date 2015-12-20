@@ -240,6 +240,20 @@ for (let codepoint of "𠮷") console.log(codepoint)
 
 //Enhanced Regular Expression
 //Regular exp sticky matching
+//ACME6
+let parser = (input, match) => {
+    for (let pos = 0, lastPos = input.length; pos < lastPos; ) {
+        for (let i = 0; i < match.length; i++) {
+            match[i].pattern.lastIndex = pos
+            let found
+            if ((found = match[i].pattern.exec(input)) !== null) {
+                match[i].action(found)
+                pos = match[i].pattern.lastIndex
+                break
+            }
+        }
+    }
+}
 
 
 
