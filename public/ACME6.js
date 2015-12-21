@@ -254,7 +254,15 @@ let parser = (input, match) => {
         }
     }
 }
-
+let report = (match) => {
+    console.log(JSON.stringify(match))
+}
+parser("Foo 1 Bar 7 Baz 42", [
+    { pattern: /^Foo\s+(\d+)/y, action: (match) => report(match) },
+    { pattern: /^Bar\s+(\d+)/y, action: (match) => report(match) },
+    { pattern: /^Baz\s+(\d+)/y, action: (match) => report(match) },
+    { pattern: /^\s*/y,         action: (match) => {}            }
+])
 
 
 //acme 5
