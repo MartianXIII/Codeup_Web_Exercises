@@ -276,6 +276,15 @@ var parser = function (input, match) {
         }
     }
 }
+var report = function (match) {
+    console.log(JSON.stringify(match));
+};
+parser("Foo 1 Bar 7 Baz 42", [
+    { pattern: /^Foo\s+(\d+)/, action: function (match) { report(match); } },
+    { pattern: /^Bar\s+(\d+)/, action: function (match) { report(match); } },
+    { pattern: /^Baz\s+(\d+)/, action: function (match) { report(match); } },
+    { pattern: /^\s*/,         action: function (match) {}                 }
+]);
 
 
 
