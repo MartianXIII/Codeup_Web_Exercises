@@ -265,6 +265,17 @@ parser("Foo 1 Bar 7 Baz 42", [
 ])
 
 //acme5
+var parser = function (input, match) {
+    for (var i, found, inputTmp = input; inputTmp !== ""; ) {
+        for (i = 0; i < match.length; i++) {
+            if ((found = match[i].pattern.exec(inputTmp)) !== null) {
+                match[i].action(found);
+                inputTmp = inputTmp.substr(found[0].length);
+                break;
+            }
+        }
+    }
+}
 
 
 
