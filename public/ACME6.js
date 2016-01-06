@@ -285,14 +285,4 @@ parser("Foo 1 Bar 7 Baz 42", [
     { pattern: /^Baz\s+(\d+)/, action: function (match) { report(match); } },
     { pattern: /^\s*/,         action: function (match) {}                 }
 ]);
-
-
-
-
-
-
-
-
-
-
 //acme 5
