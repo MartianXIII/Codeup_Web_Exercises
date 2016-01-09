@@ -292,3 +292,14 @@ obj = { x, y }
 
 //Acme 5
 obj = { x : x, y: y };
+
+//Computed property names acme 6
+obj = {
+  foo: "bar",
+  [ "prop_" + foo() ]: = 42
+}
+//acme 5
+obj = {
+  foo: "bar"
+};
+obj [ "prop_" + foo() ] = 42;
