@@ -285,4 +285,10 @@ parser("Foo 1 Bar 7 Baz 42", [
     { pattern: /^Baz\s+(\d+)/, action: function (match) { report(match); } },
     { pattern: /^\s*/,         action: function (match) {}                 }
 ]);
-//acme 5
+
+//Enhanced object Properties -
+//Property shorthand ACME 6
+obj = { x, y }
+
+//Acme 5
+obj = { x : x, y: y };
