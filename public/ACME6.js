@@ -304,4 +304,21 @@ obj = {
 };
 obj [ "prop_" + foo() ] = 42;
 
-//Method Properties
+//Method Properties acme 6
+
+obj = {
+  foo (a, b) {
+  },
+  bar (x, y) {
+  },
+  *quux (x, y) {
+  }
+}
+//acme 5
+obj = {
+  foo: function (a, b) {
+  },
+  bar: function (x, y) {
+  },
+  // quux no equivalent in ES5
+};
