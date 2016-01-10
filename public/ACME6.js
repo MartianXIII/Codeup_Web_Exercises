@@ -303,3 +303,5 @@ obj = {
   foo: "bar"
 };
 obj [ "prop_" + foo() ] = 42;
+
+//Method Properties
