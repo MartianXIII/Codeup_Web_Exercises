@@ -322,3 +322,17 @@ obj = {
   },
   // quux no equivalent in ES5
 };
+
+//Destructuring Assignment
+// Array Matching Acme6
+
+var list = [1, 2, 3]
+var [ a, , b ] = list
+[ b, a ] = [ a, b]
+
+//acme 5
+var list = [ 1, 2, 3 ];
+var a =list[0], b = list[2];
+var tmp = a; a = b; b = tmp;
+
+//Object
