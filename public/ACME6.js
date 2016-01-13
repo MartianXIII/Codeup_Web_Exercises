@@ -336,4 +336,11 @@ var a =list[0], b = list[2];
 var tmp = a; a = b; b = tmp;
 
 //Object Matching, Shorthand Notation
-//acme6 
+//acme6
+var { op, lhs, rhs } = getASTNode()
+
+//acme5
+var tmp = getASTNode();
+var op  = tmp.op;
+var lhs = tmp.lhs;
+var rhs = tmp.rhs;
