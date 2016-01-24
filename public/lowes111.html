@@ -1,0 +1,91 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>Lowes</h1>
+
+  <div id="lowes"></div>
+  <div id="lowes2"></div>
+
+
+  <script type="text/javascript">
+    var items = [];
+    var xhttp = new XMLHttpRequest();
+    var xhttp2 = new XMLHttpRequest();
+
+    var txt;
+    var txt2;
+
+    function addItem(itemNum) {
+      var getStr =                            "http://api.lowes.com/product/itemnumber?itemNumber="+itemNum.toString()+"&storeNumber=0595&maxResults=1&priceFlag=status&api_key=39ykqdzp24xvyde5u4fhw3k9";
+      console.log(getStr);
+
+      // Product by ItemNumber api
+
+      xhttp.onreadystatechange = function rtn() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+          txt = eval("(" + xhttp.responseText + ")");
+          console.log(txt);
+          //document.getElementById("lowes").innerHTML = xhttp.productList[0].description;
+        }
+      };
+
+      xhttp.open("GET", getStr, true, "Adobe", "eoiuewf09fewo");
+      xhttp.send();
+      console.log(xhttp);
+
+      // Product Location api
+      var getStr2 =
+      "http://api.lowes.com/product/locations?storeNumber=0595&devId=devId&itemNumber=" + itemNum.toString() + "&api_key=39ykqdzp24xvyde5u4fhw3k9";
+
+      xhttp2.onreadystatechange = function rtn2() {
+        if (xhttp2.readyState == 4 && xhttp2.status == 200) {
+          txt2 = eval("(" + xhttp2.responseText + ")");
+          console.log(txt2);
+        }
+      };
+
+      xhttp2.open("GET", getStr2, true, "Adobe", "eoiuewf09fewo");
+      xhttp2.send();
+      console.log(xhttp2);
+
+      // 5365 Kitchen Faucet
+        // var newItem = [
+        // txt.productList[0].itemNumber,
+        // txt.productList[0].description,
+        // txt.productList[0].pricing.price.retail,
+        // txt2.locations[0][0].x,
+        // txt2.locations[0][0].y
+        // ]
+
+    //  console.log(newItem);
+      // items.push(newItem);
+    }
+
+  //  setTimeout(addItem("76000"), 3000);
+  //  setTimeout(addItem("5365"), 3000);
+    addItem("5365");
+
+    //  console.log("Test " +items[0][1]);
+    // document.getElementById("lowes").innerHTML = txt.productList[0].itemNumber + "<br></br> " +  txt.productList[0].description + "<br></br> " + txt.productList[0].pricing.price.retail + " " + txt.productList[0].imageUrls.sm;
+    // function loadDoc() {
+    //   var xhttp = new XMLHttpRequest();
+    //   xhttp.onreadystatechange = function() {
+    //     if (xhttp.readyState == 4 && xhttp.status == 200) {
+    //       document.getElementById("lowes").innerHTML = xhttp.productList[0].description;
+    //     }
+    //   };
+    //  xhttp.open("GET", "http://api.lowes.com/product/itemnumber?itemNumber=5365&storeNumber=0595&maxResults=1&priceFlag=status&api_key=39ykqdzp24xvyde5u4fhw3k9", true, "Adobe", "eoiuewf09fewo");
+    //   // xhttp.setRequestHeader("Authorization", "Adobe:eoiuewf09fewo");
+    //   xhttp.send();
+    // }
+    // loadDoc();
+  </script>
+
+</body>
+
+</html>
