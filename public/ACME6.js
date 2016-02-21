@@ -357,8 +357,6 @@ var rhs = tmp.rhs;
 
 //acme five
 
-var
-
 function() {
 
 }
