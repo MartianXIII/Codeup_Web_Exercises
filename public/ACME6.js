@@ -358,7 +358,7 @@ var rhs = tmp.rhs;
 //acme five
 
 function() {
-  var mars = [];
+  mars = [];
 }
 
 
