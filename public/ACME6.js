@@ -362,7 +362,7 @@ function() {
 }
 
 function () {
-  var martian = [];
+  martian = [];
 }
 
 // acme
