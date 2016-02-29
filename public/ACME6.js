@@ -357,14 +357,6 @@ var rhs = tmp.rhs;
 
 //acme five
 
-function() {
-  mars = [];
-}
-
-function () {
-  martian = [];
-}
-
 // acme six
 
 // acme five
